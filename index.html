@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Route Finder Map</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Leaflet CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" crossorigin=""></script>
+</head>
+<body>
+  <div id="container">
+    <!-- Left Panel -->
+    <div id="panel-left">
+      <h2>🗺️ Recommended Routes</h2>
+      <div id="recommended-list"></div>
+    </div>
+
+    <!-- Right Panel -->
+    <div id="panel-right">
+      <form id="search-form">
+        <select id="start" required>
+          <option value="" disabled selected>Start Location</option>
+        </select>
+        <select id="end" required>
+          <option value="" disabled selected>Destination</option>
+        </select>
+        <button type="submit">🔍 Search Route</button>
+      </form>
+      <div id="search-route-info"></div>
+      <div id="map"></div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
